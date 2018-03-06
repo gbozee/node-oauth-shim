@@ -13,7 +13,8 @@ var creds = require('./credentials.json');
 // Initiate the shim with credentials
 oauthshim.init(creds);
 
+var port = process.env.PORT || 3000
 // Set application to listen on PORT
-app.listen(process.env.PORT);
+app.listen(port);
 
-console.log('OAuth Shim listening on ' + process.env.PORT);
+console.log('OAuth Shim listening on ' + port);
